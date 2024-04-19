@@ -31,17 +31,19 @@
             color: rgba(128, 0, 0, 0.9); /* Changed font color to dark red */
             text-align: center;
             margin: auto;
-            margin-top: 20%; /* Moved the container down */
+            margin-top: 20%; /* Moved the container further down */
         }
         h1 {
             font-family: 'Arizonia', cursive;
-            font-size: 6em; /* Increased font size */
+            font-size: 5em; /* Decreased font size */
             margin-bottom: 15px;
-            color: rgba(255, 0, 0, 0.8);
             animation: fadeIn 2s ease-in; /* Added animation for header */
+            animation-name: colorChange;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
         }
         p {
-            font-size: 1.6em; /* Increased font size */
+            font-size: 1.4em; /* Decreased font size */
             line-height: 1.6;
             margin-bottom: 15px;
             color: rgba(255, 0, 0, 0.8);
@@ -70,10 +72,10 @@
             width: 100%; /* Adjusted container width for smaller screens */
           }
           h1 {
-            font-size: 4em; /* Adjusted font size for smaller screens */
+            font-size: 3.5em; /* Adjusted font size for smaller screens */
           }
           p {
-            font-size: 1.2em; /* Adjusted font size for smaller screens */
+            font-size: 1.1em; /* Adjusted font size for smaller screens */
           }
           .cta-button {
             padding: 8px 16px;
@@ -129,6 +131,24 @@
             }
             to {
                 opacity: 1;
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: red;
+            }
+            25% {
+                color: blue;
+            }
+            50% {
+                color: purple;
+            }
+            75% {
+                color: rgb(18, 156, 36);
+            }
+            100% {
+                color: red;
             }
         }
     </style>
